@@ -13,24 +13,31 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F5F7FA;
+            background-color: #F5F7FA; /* Background */
+            color: #2C3E50; /* Text */
+        }
+        /* Using Accent color for main section headers */
+        main h2, main h3 {
+            color: #1A2B4C;
         }
         .hero-gradient {
-            background: linear-gradient(135deg, #007FFF 0%, #00C6FF 100%);
+            /* Primary to Secondary Gradient */
+            background: linear-gradient(135deg, #0078D7 0%, #009688 100%);
         }
         .zen-gradient-text {
-            background: linear-gradient(135deg, #007FFF 0%, #00a2d9 100%);
+             /* Primary to Secondary Gradient */
+            background: linear-gradient(135deg, #0078D7 0%, #009688 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .cta-button-primary {
-            background-color: #007FFF;
+            background-color: #0078D7; /* Primary */
             transition: all 0.3s ease;
         }
         .cta-button-primary:hover {
-            background-color: #0059b3;
+            background-color: #009688; /* Secondary on hover */
             transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(0, 127, 255, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 120, 215, 0.3); /* Shadow matches Primary */
         }
         .cta-button-secondary {
             background-color: rgba(255, 255, 255, 0.1);
@@ -55,12 +62,15 @@
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
+        .text-azure-primary {
+            color: #0078D7;
+        }
     </style>
 </head>
-<body class="text-gray-800">
+<body>
 
     <!-- Header -->
-    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background-color: #0081c1;">
         <div class="container mx-auto px-6 py-4">
             <nav class="flex items-center justify-between">
                 <a href="#" class="text-2xl font-bold text-white">AzureZen</a>
@@ -72,7 +82,7 @@
                     <a href="#why-us" class="text-white hover:text-gray-200 transition">Why Us</a>
                     <a href="#testimonials" class="text-white hover:text-gray-200 transition">Testimonials</a>
                 </div>
-                <a href="#contact" class="hidden md:block bg-white text-blue-600 font-semibold px-5 py-2 rounded-full hover:bg-gray-100 transition">Contact Us</a>
+                <a href="#contact" class="hidden md:block bg-white text-azure-primary font-semibold px-5 py-2 rounded-full hover:bg-gray-100 transition">Contact Us</a>
                 <button id="mobile-menu-button" class="md:hidden text-white">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
@@ -109,7 +119,7 @@
                 <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 animate-fade-in-down">Optimize, Automate, and Transform with AzureZen</h1>
                 <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-200 animate-fade-in-up">We help businesses streamline their Azure cloud, cut costs, and unlock AI-powered innovation.</p>
                 <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="https://cal.com/teamazurezen/quick-chat" target ="_blank"  class="cta-button-primary text-white font-semibold px-8 py-3 rounded-full">Book a Consultation</a>
+                    <a href="https://cal.com/teamazurezen/quick-chat" target = "_blank" class="cta-button-primary text-white font-semibold px-8 py-3 rounded-full">Book a Consultation</a>
                     <a href="#services" class="cta-button-secondary text-white font-semibold px-8 py-3 rounded-full">Explore Services</a>
                 </div>
             </div>
@@ -120,7 +130,7 @@
             <div class="container mx-auto px-6 text-center">
                 <i data-lucide="cloud-cog" class="w-16 h-16 mx-auto mb-6 zen-gradient-text"></i>
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Mission</h2>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-600">Blending deep Azure expertise with a Zen approach to simplify cloud challenges. We believe in clarity, efficiency, and empowering your business to achieve more with less complexity.</p>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto">Blending deep Azure expertise with a Zen approach to simplify cloud challenges. We believe in clarity, efficiency, and empowering your business to achieve more with less complexity.</p>
             </div>
         </section>
 
@@ -129,32 +139,32 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold mb-2">Our Core Services</h2>
-                    <p class="text-lg text-gray-600">Tailored solutions for your cloud journey.</p>
+                    <p class="text-lg">Tailored solutions for your cloud journey.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Service Card 1 -->
                     <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                         <i data-lucide="cloud" class="w-12 h-12 mb-4 zen-gradient-text"></i>
                         <h3 class="text-xl font-bold mb-2">Azure Cloud Consulting</h3>
-                        <p class="text-gray-600">From architecture design to migration and management, we ensure your Azure environment is robust and scalable.</p>
+                        <p>From architecture design to migration and management, we ensure your Azure environment is robust and scalable.</p>
                     </div>
                     <!-- Service Card 2 -->
                     <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                         <i data-lucide="trending-up" class="w-12 h-12 mb-4 zen-gradient-text"></i>
                         <h3 class="text-xl font-bold mb-2">FinOps & Cost Optimization</h3>
-                        <p class="text-gray-600">We analyze your cloud spend, identify savings, and implement FinOps best practices to maximize your ROI.</p>
+                        <p>We analyze your cloud spend, identify savings, and implement FinOps best practices to maximize your ROI.</p>
                     </div>
                     <!-- Service Card 3 -->
                     <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                         <i data-lucide="bot" class="w-12 h-12 mb-4 zen-gradient-text"></i>
                         <h3 class="text-xl font-bold mb-2">AI + No-Code Automation</h3>
-                        <p class="text-gray-600">Leverage the power of AI and low-code platforms to automate workflows and drive intelligent business processes.</p>
+                        <p>Leverage the power of AI and low-code platforms to automate workflows and drive intelligent business processes.</p>
                     </div>
                     <!-- Service Card 4 -->
                     <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                         <i data-lucide="shield-check" class="w-12 h-12 mb-4 zen-gradient-text"></i>
                         <h3 class="text-xl font-bold mb-2">Integration & Governance</h3>
-                        <p class="text-gray-600">Ensure your cloud ecosystem is secure, compliant, and seamlessly integrated with our governance frameworks.</p>
+                        <p>Ensure your cloud ecosystem is secure, compliant, and seamlessly integrated with our governance frameworks.</p>
                     </div>
                 </div>
             </div>
@@ -165,43 +175,43 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold mb-2">Our Streamlined Process</h2>
-                    <p class="text-lg text-gray-600">A clear path to cloud excellence.</p>
+                    <p class="text-lg">A clear path to cloud excellence.</p>
                 </div>
                 <div class="relative max-w-5xl mx-auto">
                     <!-- Dotted line for desktop -->
-                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-blue-200 -translate-y-1/2"></div>
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-teal-200 -translate-y-1/2"></div>
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
                         <!-- Step 1 -->
                         <div class="relative">
-                            <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-white border-2 border-blue-200 rounded-full z-10 relative">
+                            <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-white border-2 border-teal-200 rounded-full z-10 relative">
                                 <i data-lucide="search" class="w-10 h-10 zen-gradient-text"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-2">1. Discover</h3>
-                            <p class="text-gray-600">We analyze your goals, challenges, and existing infrastructure to create a baseline for success.</p>
+                            <p>We analyze your goals, challenges, and existing infrastructure to create a baseline for success.</p>
                         </div>
                         <!-- Step 2 -->
                         <div class="relative">
-                            <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-white border-2 border-blue-200 rounded-full z-10 relative">
+                            <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-white border-2 border-teal-200 rounded-full z-10 relative">
                                 <i data-lucide="drafting-compass" class="w-10 h-10 zen-gradient-text"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-2">2. Strategize</h3>
-                            <p class="text-gray-600">We design a tailored, future-proof Azure roadmap that aligns with your business objectives.</p>
+                            <p>We design a tailored, future-proof Azure roadmap that aligns with your business objectives.</p>
                         </div>
                         <!-- Step 3 -->
                         <div class="relative">
-                            <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-white border-2 border-blue-200 rounded-full z-10 relative">
+                            <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-white border-2 border-teal-200 rounded-full z-10 relative">
                                 <i data-lucide="rocket" class="w-10 h-10 zen-gradient-text"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-2">3. Implement</h3>
-                            <p class="text-gray-600">Our experts execute the plan, migrating workloads and implementing automation seamlessly.</p>
+                            <p>Our experts execute the plan, migrating workloads and implementing automation seamlessly.</p>
                         </div>
                         <!-- Step 4 -->
                         <div class="relative">
-                            <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-white border-2 border-blue-200 rounded-full z-10 relative">
+                            <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-white border-2 border-teal-200 rounded-full z-10 relative">
                                 <i data-lucide="repeat" class="w-10 h-10 zen-gradient-text"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-2">4. Optimize</h3>
-                            <p class="text-gray-600">We continuously monitor and manage your environment for peak performance and cost-efficiency.</p>
+                            <p>We continuously monitor and manage your environment for peak performance and cost-efficiency.</p>
                         </div>
                     </div>
                 </div>
@@ -213,34 +223,34 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold mb-2">Success Stories</h2>
-                    <p class="text-lg text-gray-600">See how we've helped businesses like yours.</p>
+                    <p class="text-lg">See how we've helped businesses like yours.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Case Study Card 1 -->
                     <div class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
-                        <img src="https://placehold.co/600x400/007FFF/FFFFFF?text=FinTech+Co." alt="FinTech Company" class="w-full h-48 object-cover">
+                        <img src="https://placehold.co/600x400/0078D7/FFFFFF?text=FinTech+Co." alt="FinTech Company" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">FinTech Innovator</h3>
-                            <p class="text-gray-600 mb-4">Reduced Azure spend by 35% through a comprehensive FinOps strategy and resource optimization.</p>
-                            <a href="#contact" class="font-semibold text-blue-600 hover:text-blue-800">Learn More &rarr;</a>
+                            <p class="mb-4">Reduced Azure spend by 35% through a comprehensive FinOps strategy and resource optimization.</p>
+                            <a href="#contact" class="font-semibold text-teal-600 hover:text-teal-800">Learn More &rarr;</a>
                         </div>
                     </div>
                     <!-- Case Study Card 2 -->
                     <div class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
-                        <img src="https://placehold.co/600x400/00C6FF/FFFFFF?text=E-Commerce" alt="E-Commerce Platform" class="w-full h-48 object-cover">
+                        <img src="https://placehold.co/600x400/009688/FFFFFF?text=E-Commerce" alt="E-Commerce Platform" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
-                            <p class="text-gray-600 mb-4">Automated order processing with AI and Power Automate, cutting manual effort by 80%.</p>
-                             <a href="#contact" class="font-semibold text-blue-600 hover:text-blue-800">Learn More &rarr;</a>
+                            <p class="mb-4">Automated order processing with AI and Power Automate, cutting manual effort by 80%.</p>
+                             <a href="#contact" class="font-semibold text-teal-600 hover:text-teal-800">Learn More &rarr;</a>
                         </div>
                     </div>
                     <!-- Case Study Card 3 -->
                     <div class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
-                        <img src="https://placehold.co/600x400/00A2D9/FFFFFF?text=Healthcare" alt="Healthcare Provider" class="w-full h-48 object-cover">
+                        <img src="https://placehold.co/600x400/1A2B4C/FFFFFF?text=Healthcare" alt="Healthcare Provider" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Healthcare Provider</h3>
-                            <p class="text-gray-600 mb-4">Migrated legacy systems to a secure, HIPAA-compliant Azure environment with zero downtime.</p>
-                             <a href="#contact" class="font-semibold text-blue-600 hover:text-blue-800">Learn More &rarr;</a>
+                            <p class="mb-4">Migrated legacy systems to a secure, HIPAA-compliant Azure environment with zero downtime.</p>
+                             <a href="#contact" class="font-semibold text-teal-600 hover:text-teal-800">Learn More &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -252,32 +262,32 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold mb-2">The AzureZen Difference</h2>
-                    <p class="text-lg text-gray-600">Clarity and results, delivered.</p>
+                    <p class="text-lg">Clarity and results, delivered.</p>
                 </div>
                 <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
                     <!-- Feature 1 -->
                     <div>
-                        <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-blue-100 rounded-full">
-                            <i data-lucide="award" class="w-10 h-10 text-blue-600"></i>
+                        <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-teal-100 rounded-full">
+                            <i data-lucide="award" class="w-10 h-10 text-teal-600"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Trust</h3>
-                        <p class="text-gray-600">Over 9 years of dedicated Microsoft Azure expertise and certified professionals you can rely on.</p>
+                        <p>Over 9 years of dedicated Microsoft Azure expertise and certified professionals you can rely on.</p>
                     </div>
                     <!-- Feature 2 -->
                     <div>
-                        <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-blue-100 rounded-full">
-                            <i data-lucide="puzzle" class="w-10 h-10 text-blue-600"></i>
+                        <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-teal-100 rounded-full">
+                            <i data-lucide="puzzle" class="w-10 h-10 text-teal-600"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Simplicity</h3>
-                        <p class="text-gray-600">We prioritize no-code/low-code solutions to empower your team and accelerate development.</p>
+                        <p>We prioritize no-code/low-code solutions to empower your team and accelerate development.</p>
                     </div>
                     <!-- Feature 3 -->
                     <div>
-                        <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-blue-100 rounded-full">
-                            <i data-lucide="target" class="w-10 h-10 text-blue-600"></i>
+                        <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-teal-100 rounded-full">
+                            <i data-lucide="target" class="w-10 h-10 text-teal-600"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Optimization-First</h3>
-                        <p class="text-gray-600">Our mindset is always focused on optimizing for cost, performance, and security from day one.</p>
+                        <p>Our mindset is always focused on optimizing for cost, performance, and security from day one.</p>
                     </div>
                 </div>
             </div>
@@ -288,13 +298,13 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold mb-2">What Our Clients Say</h2>
-                    <p class="text-lg text-gray-600">Real results from real partners.</p>
+                    <p class="text-lg">Real results from real partners.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     <!-- Testimonial 1 -->
                     <div class="bg-white p-8 rounded-lg shadow-md">
-                        <i data-lucide="quote" class="w-8 h-8 text-blue-300 mb-4"></i>
-                        <p class="text-gray-600 italic mb-6">"AzureZen's expertise in FinOps was a game-changer for our budget. They are true professionals who deliver tangible results. We couldn't be happier with the partnership."</p>
+                        <i data-lucide="quote" class="w-8 h-8 text-teal-300 mb-4"></i>
+                        <p class="italic mb-6">"AzureZen's expertise in FinOps was a game-changer for our budget. They are true professionals who deliver tangible results. We couldn't be happier with the partnership."</p>
                         <div>
                             <p class="font-bold">Jane Doe</p>
                             <p class="text-sm text-gray-500">CTO, FinTech Innovator</p>
@@ -302,8 +312,8 @@
                     </div>
                     <!-- Testimonial 2 -->
                     <div class="bg-white p-8 rounded-lg shadow-md">
-                        <i data-lucide="quote" class="w-8 h-8 text-blue-300 mb-4"></i>
-                        <p class="text-gray-600 italic mb-6">"The automation solution they built for us saved hundreds of hours per month. Their team made a complex process seem simple and delivered ahead of schedule."</p>
+                        <i data-lucide="quote" class="w-8 h-8 text-teal-300 mb-4"></i>
+                        <p class="italic mb-6">"The automation solution they built for us saved hundreds of hours per month. Their team made a complex process seem simple and delivered ahead of schedule."</p>
                         <div>
                             <p class="font-bold">John Smith</p>
                             <p class="text-sm text-gray-500">Head of Operations, E-commerce Platform</p>
@@ -319,35 +329,31 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div>
                         <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Cloud?</h2>
-                        <p class="text-lg text-gray-600 mb-8">Let's discuss how AzureZen can help you achieve your goals. Fill out the form or reach out to us directly.</p>
+                        <p class="text-lg mb-8">Let's discuss how AzureZen can help you achieve your goals. Fill out the form or reach out to us directly.</p>
                         <div class="space-y-4">
-                            <a href="mailto:helloazenteam@outlook.com" class="flex items-center text-gray-700 hover:text-blue-600">
+                            <a href="mailto:helloazenteam@outlook.com" class="flex items-center text-gray-700 hover:text-teal-600">
                                 <i data-lucide="mail" class="w-5 h-5 mr-3"></i>
                                 <span>helloazenteam@outlook.com</span>
                             </a>
-                            <a href="tel:+1234567890" class="flex items-center text-gray-700 hover:text-blue-600">
-                                <i data-lucide="phone" class="w-5 h-5 mr-3"></i>
-                                <span>+1 (234) 567-890</span>
-                            </a>
                         </div>
                         <div class="flex space-x-4 mt-8">
-                            <a href="#" class="text-gray-500 hover:text-blue-600"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
-                            <a href="#" class="text-gray-500 hover:text-blue-600"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-teal-600"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-teal-600"><i data-lucide="twitter" class="w-6 h-6"></i></a>
                         </div>
                     </div>
                     <div class="bg-gray-50 p-8 rounded-lg shadow-md">
                         <form>
                             <div class="mb-5">
-                                <label for="name" class="block mb-2 text-sm font-medium text-gray-700">Full Name</label>
-                                <input type="text" id="name" class="w-full p-3 bg-white border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="John Doe" required>
+                                <label for="name" class="block mb-2 text-sm font-medium">Full Name</label>
+                                <input type="text" id="name" class="w-full p-3 bg-white border border-gray-300 rounded-lg focus:ring-teal-500 focus:border-teal-500" placeholder="John Doe" required>
                             </div>
                             <div class="mb-5">
-                                <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Email Address</label>
-                                <input type="email" id="email" class="w-full p-3 bg-white border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="you@company.com" required>
+                                <label for="email" class="block mb-2 text-sm font-medium">Email Address</label>
+                                <input type="email" id="email" class="w-full p-3 bg-white border border-gray-300 rounded-lg focus:ring-teal-500 focus:border-teal-500" placeholder="you@company.com" required>
                             </div>
                             <div class="mb-5">
-                                <label for="message" class="block mb-2 text-sm font-medium text-gray-700">Message</label>
-                                <textarea id="message" rows="4" class="w-full p-3 bg-white border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Tell us about your project..."></textarea>
+                                <label for="message" class="block mb-2 text-sm font-medium">Message</label>
+                                <textarea id="message" rows="4" class="w-full p-3 bg-white border border-gray-300 rounded-lg focus:ring-teal-500 focus:border-teal-500" placeholder="Tell us about your project..."></textarea>
                             </div>
                             <button type="submit" class="cta-button-primary text-white font-semibold w-full px-5 py-3 rounded-lg">Send Message</button>
                         </form>
@@ -360,7 +366,7 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-8 text-center">
-            <p>&copy; 2024 AzureZen. All Rights Reserved.</p>
+            <p>&copy; 2025 AzureZen. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -445,5 +451,4 @@
     </script>
 </body>
 </html>
-
 
